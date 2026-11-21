@@ -1,39 +1,17 @@
 #ifndef CARD_H
 #define CARD_H
 
-// Card suits
-typedef enum 
-{ 
-	CLUBS,
-       	DIAMONDS,
-       	HEARTS,
-       	SPADES
-} Suit;
+#define TOTAL_CARDS 32
 
-// Card ranks
-typedef enum
+struct Card
 {
-       	SEVEN,
-       	EIGHT,
-       	NINE,
-       	TEN,
-       	JACK,
-       	QUEEN,
-       	KING,
-       	ACE
-} Rank;
+    char rank[6];
+    int suit;
+};
 
-// Card structure
-typedef struct
-{
-    Suit suit;
-    Rank rank;
-} Card;
-
-// Function declaration
-const char* suit_to_string(Suit s);
-const char* rank_to_string(Rank r);
-void print_card(Card c);
+void initializeDeck(struct Card deck[]);
+void shuffleDeck(struct Card deck[]);
+void displayCard(struct Card card);
 
 #endif
 
