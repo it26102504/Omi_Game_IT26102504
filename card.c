@@ -44,8 +44,8 @@ void displayCards(Card cards[], int count)
     {
         if (count > 1)
        	{
-            printf("%d ", i + 1);
-        }
+            printf("%d. ", i + 1);
+        } 
 
 	// Convert 11-14 into card names
         switch (cards[i].rank)
