@@ -34,5 +34,18 @@ int main(void)
     // Select trump
     selectTrump();
 
+    // Display all 8 cards
+    printf("\nYour 8 cards:\n");
+    displayCards(players[0].hand, HAND_SIZE);
+
+    // Display trick number
+     printf("\n------------------------------\n");
+     printf("          TRICK NO. 1\n");
+     printf("------------------------------\n");
+
     return 0;
+
 }
+
+
+
